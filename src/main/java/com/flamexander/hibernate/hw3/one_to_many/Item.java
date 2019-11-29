@@ -4,7 +4,7 @@ import javax.persistence.*;
 import java.io.Serializable;
 
 @Entity
-@Table(name = "items")
+@Table(name = "items_hw3")
 public class Item implements Serializable {
 
     private static final long serialVersionUID = -2750973356670718107L;
@@ -55,14 +55,15 @@ public class Item implements Serializable {
     public Item() {
     }
 
-    public Item(String title, int cost) {
+    public Item(String title, int cost,Customer customer) {
         this.title = title;
         this.cost = cost;
+        this.customer=customer;
     }
 
     @Override
     public String toString() {
-        return String.format("Products [id = %d, title = %s, cost = %d]", id, title, cost);
+        return String.format("Item [id = %d, title = %s, cost = %d]", id, title, cost);
     }
 
 }

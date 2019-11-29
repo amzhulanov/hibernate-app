@@ -14,9 +14,9 @@ INSERT INTO products (title_fld, cost_fld) VALUES
 ('meat', 37.2),
 ('coke', 2.2);
 
-DROP TABLE IF EXISTS items CASCADE;
-CREATE TABLE items (item_id bigserial PRIMARY KEY, title_fld VARCHAR(255), cost_fld int, customer_id bigint REFERENCES customers(customer_id));
-INSERT INTO items (title_fld, cost_fld) VALUES
+DROP TABLE IF EXISTS items_hw3 CASCADE;
+CREATE TABLE items_hw3 (item_id bigserial PRIMARY KEY, title_fld VARCHAR(255), cost_fld int, customer_id bigint REFERENCES customers(customer_id));
+INSERT INTO items_hw3 (title_fld, cost_fld) VALUES
 ('comp', 10),
 ('mouse', 37),
 ('keyboard', 2);

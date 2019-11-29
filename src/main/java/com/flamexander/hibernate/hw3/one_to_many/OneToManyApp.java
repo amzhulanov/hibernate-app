@@ -15,6 +15,7 @@ public class OneToManyApp {
                 .buildSessionFactory();
 
         Session session = null;
+
         try {
             session = factory.getCurrentSession();
             session.beginTransaction();
